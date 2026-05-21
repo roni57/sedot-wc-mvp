@@ -5,5 +5,3 @@
 /composer.phar
 .git
 .github
-/bootstrap/cache/packages.php
-/bootstrap/cache/services.php
