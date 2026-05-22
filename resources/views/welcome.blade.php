@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasa Sedot WC Profesional - Solusi Cepat & Bergaransi 24/7</title>
-    <meta name="description" content="Jasa Sedot WC Profesional, Murah, dan Bergaransi. Mengatasi WC mampet, septic tank penuh, dan saluran tersumbat 24 Jam dengan armada modern.">
+    <title>{{ $settings['site_title'] ?? 'Jasa Sedot WC Profesional - Solusi Cepat & Bergaransi 24/7' }}</title>
+    <meta name="description" content="{{ $settings['site_description'] ?? 'Jasa Sedot WC Profesional, Murah, dan Bergaransi. Mengatasi WC mampet, septic tank penuh, dan saluran tersumbat 24 Jam dengan armada modern.' }}">
     
     <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1022,7 +1022,7 @@
 <body>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/628123456789?text=Halo%20Admin%20Sedot%20WC,%20saya%20ingin%20memesan%20jasa%20sedot%20WC..." class="wa-float" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/{{ $settings['contact_whatsapp'] ?? '628123456789' }}?text=Halo%20Admin%20Sedot%20WC,%20saya%20ingin%20memesan%20jasa%20sedot%20WC..." class="wa-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1042,7 +1042,7 @@
                     <a href="#keunggulan" class="nav-link">Keunggulan</a>
                     <a href="#cara-kerja" class="nav-link">Cara Kerja</a>
                 </nav>
-                <a href="https://wa.me/628123456789?text=Halo%20Admin%20Sedot%20WC,%20saya%20ingin%20konsultasi..." class="nav-btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/{{ $settings['contact_whatsapp'] ?? '628123456789' }}?text=Halo%20Admin%20Sedot%20WC,%20saya%20ingin%20konsultasi..." class="nav-btn" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i> Hubungi Kami
                 </a>
             </div>
@@ -1055,12 +1055,12 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <div class="hero-badge">
-                        <i class="fas fa-shield-alt"></i> #1 Jasa Sanitasi Terpercaya
+                        <i class="fas fa-shield-alt"></i> {{ $settings['hero_badge'] ?? '#1 Jasa Sanitasi Terpercaya' }}
                     </div>
-                    <h1 class="hero-title">Solusi Cepat <span>WC Mampet</span> & Septic Tank Penuh!</h1>
-                    <p class="hero-desc">Layanan profesional, berpengalaman, dan bergaransi resmi. Kami hadir 24 Jam siap mengatasi berbagai masalah sanitasi Anda secara tuntas tanpa repot.</p>
+                    <h1 class="hero-title">{!! $settings['hero_title'] ?? 'Solusi Cepat <span>WC Mampet</span> & Septic Tank Penuh!' !!}</h1>
+                    <p class="hero-desc">{{ $settings['hero_description'] ?? 'Layanan profesional, berpengalaman, dan bergaransi resmi. Kami hadir 24 Jam siap mengatasi berbagai masalah sanitasi Anda secara tuntas tanpa repot.' }}</p>
                     <div class="hero-cta">
-                        <a href="https://wa.me/628123456789?text=Halo%20Admin%20Sedot%20WC,%20saya%20ingin%20memesan%20jasa%20sekarang..." class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/{{ $settings['contact_whatsapp'] ?? '628123456789' }}?text=Halo%20Admin%20Sedot%20WC,%20saya%20ingin%20memesan%20jasa%20sekarang..." class="btn btn-primary" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-whatsapp"></i> Pesan Sekarang
                         </a>
                         <a href="#layanan" class="btn btn-secondary">Pelajari Layanan</a>
@@ -1073,15 +1073,15 @@
                 </div>
                 <div class="hero-image-container">
                     <div class="hero-image-bg"></div>
-                    <img src="/images/hero_sedot_wc.png" alt="Jasa Sedot WC Profesional" class="hero-image">
+                    <img src="{{ $settings['hero_image'] ?? '/images/hero_sedot_wc.png' }}" alt="Jasa Sedot WC Profesional" class="hero-image">
                     
                     <div class="floating-badge badge-1">
                         <div class="floating-badge-icon">
                             <i class="fas fa-truck-moving"></i>
                         </div>
                         <div class="floating-badge-text">
-                            <p>Armada Canggih</p>
-                            <h4>Selang 100m+</h4>
+                            <p>{{ $settings['floating_badge_1_title'] ?? 'Armada Canggih' }}</p>
+                            <h4>{{ $settings['floating_badge_1_value'] ?? 'Selang 100m+' }}</h4>
                         </div>
                     </div>
 
@@ -1090,8 +1090,8 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <div class="floating-badge-text">
-                            <p>Respon Cepat</p>
-                            <h4>24 Jam Nonstop</h4>
+                            <p>{{ $settings['floating_badge_2_title'] ?? 'Respon Cepat' }}</p>
+                            <h4>{{ $settings['floating_badge_2_value'] ?? '24 Jam Nonstop' }}</h4>
                         </div>
                     </div>
                 </div>
@@ -1103,22 +1103,12 @@
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">12k+</div>
-                    <div class="stat-label">Pekerjaan Selesai</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Armada Truk Tangki</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Kepuasan Pelanggan</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Tahun Pengalaman</div>
-                </div>
+                @foreach($stats as $stat)
+                    <div class="stat-card">
+                        <div class="stat-number">{{ $stat->value }}</div>
+                        <div class="stat-label">{{ $stat->label }}</div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -1133,26 +1123,14 @@
             </div>
             
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-trash-restore"></i></div>
-                    <h3>Sedot Septic Tank</h3>
-                    <p>Mengatasi septic tank penuh secara berkala agar lingkungan Anda tetap sehat dan terhindar dari bau tidak sedap.</p>
-                    <a href="https://wa.me/628123456789?text=Halo%20Admin%20Sedot%20WC,%20saya%20ingin%20layanan%20Sedot%20Septic%20Tank..." class="service-link" target="_blank" rel="noopener noreferrer">Pesan Sekarang <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-fill-drip"></i></div>
-                    <h3>Pelancaran WC Mampet</h3>
-                    <p>WC tersumbat pembalut, mainan anak, atau kerak? Kami lancarkan kembali tanpa perlu melakukan pembongkaran pipa.</p>
-                    <a href="https://wa.me/628123456789?text=Halo%20Admin%20Sedot%20WC,%20saya%20ingin%20layanan%20Pelancaran%20WC%20Mampet..." class="service-link" target="_blank" rel="noopener noreferrer">Pesan Sekarang <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-shower"></i></div>
-                    <h3>Saluran Air Mampet</h3>
-                    <p>Mengatasi genangan air akibat saluran wastafel, floor drain kamar mandi, maupun talang air yang tersumbat lemak & kotoran.</p>
-                    <a href="https://wa.me/628123456789?text=Halo%20Admin%20Sedot%20WC,%20saya%20ingin%20layanan%20Saluran%20Air%20Mampet..." class="service-link" target="_blank" rel="noopener noreferrer">Pesan Sekarang <i class="fas fa-arrow-right"></i></a>
-                </div>
+                @foreach($services as $service)
+                    <div class="service-card">
+                        <div class="service-icon"><i class="{{ $service->icon }}"></i></div>
+                        <h3>{{ $service->title }}</h3>
+                        <p>{{ $service->description }}</p>
+                        <a href="https://wa.me/{{ $settings['contact_whatsapp'] ?? '628123456789' }}?text={{ urlencode($service->wa_text) }}" class="service-link" target="_blank" rel="noopener noreferrer">Pesan Sekarang <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -1167,29 +1145,15 @@
                     <p>Kami memahami bahwa masalah WC penuh dan saluran mampet sangat mengganggu kenyamanan. Oleh karena itu, kami menghadirkan layanan prima yang terstandarisasi.</p>
                     
                     <div class="benefit-list">
-                        <div class="benefit-item">
-                            <div class="benefit-icon"><i class="fas fa-user-tie"></i></div>
-                            <div class="benefit-text">
-                                <h4>Teknisi Profesional & Ramah</h4>
-                                <p>Seluruh tim kami adalah pekerja terlatih yang berpengalaman bertahun-tahun di bidang sanitasi.</p>
+                        @foreach($benefits as $benefit)
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><i class="{{ $benefit->icon }}"></i></div>
+                                <div class="benefit-text">
+                                    <h4>{{ $benefit->title }}</h4>
+                                    <p>{{ $benefit->description }}</p>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="benefit-item">
-                            <div class="benefit-icon"><i class="fas fa-cogs"></i></div>
-                            <div class="benefit-text">
-                                <h4>Peralatan Modern & Vacuum Kuat</h4>
-                                <p>Armada truk tangki dengan teknologi vacuum terbaru bertekanan tinggi untuk hasil penyedotan maksimal.</p>
-                            </div>
-                        </div>
-
-                        <div class="benefit-item">
-                            <div class="benefit-icon"><i class="fas fa-tags"></i></div>
-                            <div class="benefit-text">
-                                <h4>Harga Transparan & Terjangkau</h4>
-                                <p>Sistem tarif jujur sesuai kesepakatan awal tanpa ada biaya siluman atau tambahan tak terduga.</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
 
@@ -1197,23 +1161,20 @@
                     <div class="benefits-card">
                         <h3>Apa Kata Mereka?</h3>
                         
-                        <div class="review-item">
-                            <div class="review-stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        @foreach($testimonials as $index => $testimonial)
+                            @if($index > 0)
+                                <hr style="border: 0; border-top: 1px solid var(--gray-light); margin: 15px 0;">
+                            @endif
+                            <div class="review-item">
+                                <div class="review-stars">
+                                    @for($i = 0; $i < $testimonial->stars; $i++)
+                                        <i class="fas fa-star"></i>
+                                    @endfor
+                                </div>
+                                <p class="review-text">"{{ $testimonial->text }}"</p>
+                                <p class="review-user">- {{ $testimonial->name }}</p>
                             </div>
-                            <p class="review-text">"Sangat cepat tanggap! Kurang dari 1 jam tim sudah sampai rumah dan WC mampet langsung beres tanpa dibongkar. Harga sangat bersahabat."</p>
-                            <p class="review-user">- Pak Rahmat, Jakarta</p>
-                        </div>
-
-                        <hr style="border: 0; border-top: 1px solid var(--gray-light); margin: 15px 0;">
-
-                        <div class="review-item">
-                            <div class="review-stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="review-text">"Petugasnya ramah dan kerjanya rapi sekali. Selesai disedot halaman langsung dibersihkan kembali. Rekomendasi sekali buat yang septic tank-nya penuh!"</p>
-                            <p class="review-user">- Ibu Sarah, Tangerang</p>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -1230,23 +1191,13 @@
             </div>
 
             <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <h3>Hubungi Via WhatsApp</h3>
-                    <p>Klik tombol hubungi kami untuk langsung berkonsultasi mengenai keluhan dan lokasi rumah Anda dengan admin responsif kami.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <h3>Tim Meluncur ke Lokasi</h3>
-                    <p>Tim profesional kami beserta armada tangki vacuum akan langsung dikerahkan ke lokasi Anda sesuai waktu yang disepakati.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <h3>Pengerjaan & Pembayaran</h3>
-                    <p>Teknisi melakukan penyedotan/pelancaran. Setelah dipastikan lancar dan bersih, Anda cukup membayar sesuai tarif awal.</p>
-                </div>
+                @foreach($steps as $step)
+                    <div class="step-card">
+                        <div class="step-num">{{ $step->step_number }}</div>
+                        <h3>{{ $step->title }}</h3>
+                        <p>{{ $step->description }}</p>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -1258,10 +1209,10 @@
                 <h2 class="cta-title">WC Anda Mampet atau Septic Tank Penuh?</h2>
                 <p class="cta-desc">Jangan tunggu sampai meluber dan menimbulkan penyakit! Hubungi kami sekarang dan nikmati diskon khusus pemesanan hari ini.</p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/628123456789?text=Halo%20Admin%20Sedot%20WC,%20saya%20ingin%20mendapatkan%20Diskon%20Sanitasi..." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/{{ $settings['contact_whatsapp'] ?? '628123456789' }}?text=Halo%20Admin%20Sedot%20WC,%20saya%20ingin%20mendapatkan%20Diskon%20Sanitasi..." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i> Hubungi WhatsApp (Respon Cepat)
                     </a>
-                    <a href="tel:628123456789" class="btn btn-secondary" style="background: transparent; color: white; border-color: white;">
+                    <a href="tel:{{ $settings['contact_phone'] ?? '628123456789' }}" class="btn btn-secondary" style="background: transparent; color: white; border-color: white;">
                         <i class="fas fa-phone-alt"></i> Telepon Langsung
                     </a>
                 </div>
@@ -1280,7 +1231,7 @@
                         </div>
                         <div class="logo-text">SedotWC.com</div>
                     </a>
-                    <p>SedotWC.com adalah penyedia jasa layanan sedot WC, pelancaran saluran mampet, dan pembuatan septic tank baru profesional berlisensi yang beroperasi 24 Jam setiap hari.</p>
+                    <p>{{ $settings['footer_about'] ?? 'SedotWC.com adalah penyedia jasa layanan sedot WC, pelancaran saluran mampet, dan pembuatan septic tank baru profesional berlisensi yang beroperasi 24 Jam setiap hari.' }}</p>
                     <div class="social-links">
                         <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
@@ -1303,15 +1254,15 @@
                     <div class="contact-list">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Jl. Kesehatan Raya No. 12, Area Metropolitan, Indonesia</span>
+                            <span>{{ $settings['contact_address'] ?? 'Jl. Kesehatan Raya No. 12, Area Metropolitan, Indonesia' }}</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone-alt"></i>
-                            <span>+62 812-3456-7890</span>
+                            <span>{{ $settings['contact_phone'] ?? '+62 812-3456-7890' }}</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>info@sedotwc.com</span>
+                            <span>{{ $settings['contact_email'] ?? 'info@sedotwc.com' }}</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-clock"></i>

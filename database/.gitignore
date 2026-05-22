@@ -1,1 +1,1 @@
-*.sqlite*
+# allow sqlite in database/ folder
