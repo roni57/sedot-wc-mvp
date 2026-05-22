@@ -10,6 +10,14 @@
     },
     "routes": [
         {
+            "src": "/(css|js|images|fonts|favicon)/(.*)",
+            "dest": "/$1/$2"
+        },
+        {
+            "src": "/(.*)\\.(ico|png|jpg|jpeg|gif|svg|txt|css|js|webmanifest)$",
+            "dest": "/$1.$2"
+        },
+        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
